@@ -1,16 +1,22 @@
--- Import custom keymaps 
+-- Import keymaps 
 require("lua.keymaps")
 
 -- vim settings
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax enable")
-vim.o.number = true
+vim.opt.number = true
+
+-- Tabbing behavior
+vim.opt.expandtab = true    -- Use spaces instead of tabs
+vim.opt.shiftwidth = 4      -- Size of an indent
+vim.opt.tabstop = 4         -- Number of spaces a tab counts for
+vim.opt.softtabstop = 4     -- Spaces when you press <Tab>
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath})
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },

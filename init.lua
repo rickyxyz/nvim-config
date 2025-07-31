@@ -1,10 +1,14 @@
 -- Import keymaps 
-require("lua.keymaps")
+require("keymaps")
 
 -- vim settings
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax enable")
 vim.opt.number = true
+
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Tabbing behavior
 vim.opt.expandtab = true    -- Use spaces instead of tabs
@@ -33,6 +37,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add your plugins here
+    { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
@@ -40,3 +45,5 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+require("config.nvim-tree")

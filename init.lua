@@ -16,6 +16,14 @@ vim.opt.shiftwidth = 4      -- Size of an indent
 vim.opt.tabstop = 4         -- Number of spaces a tab counts for
 vim.opt.softtabstop = 4     -- Spaces when you press <Tab>
 
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then

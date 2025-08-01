@@ -1,5 +1,5 @@
--- Import keymaps 
-require("keymaps")
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 -- vim settings
 vim.cmd("filetype plugin indent on")
@@ -53,3 +53,7 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+-- Import keymaps 
+require("keymaps")
+

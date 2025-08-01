@@ -54,6 +54,9 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
+-- Floating Terminal
+-- require("custom.floaterm")
+
 -- Import keymaps 
 require("keymaps")
 

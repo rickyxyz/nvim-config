@@ -27,7 +27,8 @@ map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" }
 map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
 
 -- terminal
-map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
+map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "terminal escape terminal mode" })
+map("n", "<leader>t", require('custom.terminal').toggle_terminal, { noremap = true, silent = true, desc = "Toggle terminal" })
 
 -- telescope
 map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })

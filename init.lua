@@ -54,15 +54,15 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
+-- Theme
+vim.cmd("colorscheme tokyonight-night")
+
 -- Lualine
 require('lualine').setup({
     options = {
         theme = 'onedark'
     }
 })
-
--- Floating Terminal
--- require("custom.floaterm")
 
 -- Import keymaps 
 require("keymaps")

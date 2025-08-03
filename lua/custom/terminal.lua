@@ -15,8 +15,8 @@ function M.toggle_terminal()
   -- Reuse terminal buffer if it exists
   if not vim.api.nvim_buf_is_valid(state.term_buf) then
     vim.cmd("botright split") -- Open split at bottom
-    vim.cmd("resize 15")      -- Set height of terminal
-    vim.cmd("terminal")       -- Create new terminal
+    vim.cmd("resize 15") -- Set height of terminal
+    vim.cmd("terminal") -- Create new terminal
     state.term_win = vim.api.nvim_get_current_win()
     state.term_buf = vim.api.nvim_get_current_buf()
   else
@@ -32,4 +32,4 @@ end
 
 vim.api.nvim_create_user_command("Terminalpane", M.toggle_terminal, {})
 
-return M;
+return M

@@ -1,11 +1,11 @@
-local builtin = require('telescope.builtin')
+local builtin = require("telescope.builtin")
 
 local map = vim.keymap.set
 
-map("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true})
-map("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true})
-map("n", "n", "nzzzv", { noremap = true, silent = true})
-map("n", "N", "Nzzzv", { noremap = true, silent = true})
+map("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+map("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+map("n", "n", "nzzzv", { noremap = true, silent = true })
+map("n", "N", "Nzzzv", { noremap = true, silent = true })
 
 map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
 map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
@@ -28,13 +28,18 @@ map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window"
 
 -- terminal
 map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "terminal escape terminal mode" })
-map("n", "<leader>t", require('custom.terminal').toggle_terminal, { noremap = true, silent = true, desc = "Toggle terminal" })
+map(
+  "n",
+  "<leader>t",
+  require("custom.terminal").toggle_terminal,
+  { noremap = true, silent = true, desc = "Toggle terminal" }
+)
 
 -- telescope
-map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-map('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+map("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+map("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+map("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+map("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {

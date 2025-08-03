@@ -21,7 +21,17 @@ return {
   },
   config = function()
     require("nvim-tree").setup({
-      on_attach = my_on_attach,
+      diagnostics = {
+        enable = true,
+        show_on_dirs = false,
+        debounce_delay = 50,
+          icons = {                 -- Customize per‑severity icons
+          hint = "",
+          info = "",
+          warning = "",
+          error = "",
+        },
+      },
       sort = {
         sorter = "case_sensitive",
       },

@@ -46,6 +46,7 @@ require("lazy").setup({
   spec = {
     -- add your plugins here
     { import = "plugins" },
+    { import = "plugins.lsp" }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
@@ -66,3 +67,5 @@ require('lualine').setup({
 
 -- Import keymaps 
 require("keymaps")
+
+-- require("configs.lua_ls")

@@ -8,9 +8,16 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
+        "lua_ls",
+        "ts_ls",
+        "tailwindcss",
+        "cssls",
+        "html",
         "prettier",
         "stylua",
         "eslint_d",
+        "emmet_language_server",
+        "jsonls",
       },
     })
   end,

@@ -21,6 +21,10 @@ return {
   },
   config = function()
     require("nvim-tree").setup({
+      git = {
+          enable = true,
+          -- show_on_dirs = false
+      },
       diagnostics = {
         enable = true,
         show_on_dirs = false,
@@ -40,6 +44,7 @@ return {
       },
       renderer = {
         group_empty = true,
+        highlight_git = "all"
       },
       filters = {
         dotfiles = true,

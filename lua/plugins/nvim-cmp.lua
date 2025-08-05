@@ -29,7 +29,7 @@ return {
         ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggetsion
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-space>"] = cmp.mapping.complete(), -- show suggetion window
+        ["<C-a>"] = cmp.mapping.complete(), -- ctrl + space does not work on window terminal
         ["<C-e>"] = cmp.mapping.abort(), -- close suggestion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
       }),

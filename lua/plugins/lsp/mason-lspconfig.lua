@@ -11,6 +11,7 @@ return {
         "html",
         "emmet_language_server",
         "jsonls",
+        "eslint-lsp",
       },
       automatic_installation = true,
     },

@@ -15,7 +15,6 @@ return {
         "html",
         "prettier",
         "stylua",
-        "eslint_d",
         "emmet_language_server",
         "jsonls",
       },

@@ -33,7 +33,21 @@ return {
     })
 
     vim.lsp.config("eslint", {
-      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+      filetypes = {
+        "html",
+        "typescript",
+        "typescriptreact",
+        "javascript",
+        "javascriptreact",
+        "vue",
+        "svelte",
+        "graphql",
+      },
+      settings = {
+        experimental = {
+          useFlatConfig = true,
+        },
+      },
     })
 
     require("plugins.lsp.configs.lua_ls")

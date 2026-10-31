@@ -11,7 +11,6 @@ return {
     -- Luckily, the only things that those plugins need are the custom queries, which we make available
     -- during startup.
     require("lazy.core.loader").add_to_rtp(plugin)
-    require("nvim-treesitter.query_predicates")
   end,
   cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
   keys = {
@@ -75,6 +74,6 @@ return {
     if type(opts.ensure_installed) == "table" then
       opts.ensure_installed = opts.ensure_installed
     end
-    require("nvim-treesitter.configs").setup(opts)
+    require("nvim-treesitter").setup(opts)
   end,
 }
